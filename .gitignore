@@ -1,69 +1,22 @@
-# Prerequisites
-*.d
+int greenPin = A2;
+int yellowPin = A3;
+int redPin = A4;
+void setup() {
+  // put your setup code here, to run once:
+pinMode(greenPin,OUTPUT);
+pinMode(yellowPin,OUTPUT);
+pinMode(redPin,OUTPUT);
+}
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-*.so.*
-
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# Build directories
-build/
-Build/
-build-*/
-
-# CMake generated files
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
-install_manifest.txt
-compile_commands.json
-
-# Temporary files
-*.tmp
-*.log
-*.bak
-*.swp
-
-# vcpkg
-vcpkg_installed/
-
-# debug information files
-*.dwo
-
-# test output & cache
-Testing/
-.cache/
+void loop() {
+  // put your main code here, to run repeatedly:
+digitalWrite(greenPin, HIGH);
+delay(3000);
+digitalWrite(greenPin, LOW);
+digitalWrite(yellowPin, HIGH);
+delay(1000);
+digitalWrite(yellowPin, LOW);
+digitalWrite(redPin, HIGH);
+delay(3000);
+digitalWrite(redPin, LOW);
+}
